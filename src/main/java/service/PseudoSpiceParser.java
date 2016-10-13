@@ -3,7 +3,9 @@ package service;
 import model.*;
 import model.components.*;
 
+import java.awt.*;
 import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -23,10 +25,13 @@ public class PseudoSpiceParser implements CircuitParser{
      * @modifies elements to contain all circuit elements
      */
     public void parse(File f){
+        List<Point> points = new ArrayList<Point>(); //tracks all points (coordinates where components intersect)
         //For each line...
         //CircuitElm elm = parseLineToElm()
         //elements.add(elm)
-        //...
+        //Add any new points discovered
+        //The negative terminal of the first V source discovered is ground node
+        //
         //parseNodes()
         //TODO
     }
