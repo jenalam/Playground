@@ -11,33 +11,22 @@ import java.util.List;
 /**
  * Created by Jennifer on 10/10/2016.
  *
- * Takes the pseudo-spice txt file representing circuit interpreted from opencv and parses it into a Circuit
+ * Takes the pseudo-spice txt file representing circuit interpreted from opencv and parses it into Circuit elements
  */
 public class PseudoSpiceParser implements CircuitParser{
 
-    private List<CircuitNode> nodes;
     private List<CircuitElm> elements;
 
-    /**
-     * Parses pseudo-spice txt file into nodes and elements
-     * @param f file to parse
-     * @modifies nodes to contain all circuit nodes for Modified Nodal Analysis
-     * @modifies elements to contain all circuit elements
-     */
     public void parse(File f){
         List<Point> points = new ArrayList<Point>(); //tracks all points (coordinates where components intersect)
         //For each line...
-        //CircuitElm elm = parseLineToElm()
+        //CircuitElm elm = parseLineToElm(line)
         //elements.add(elm)
         //Add any new points discovered
         //The negative terminal of the first V source discovered is ground node
         //
         //parseNodes()
         //TODO
-    }
-
-    public List<CircuitNode> getNodes(){
-        return null; //TODO
     }
 
     public List<CircuitElm> getElements(){

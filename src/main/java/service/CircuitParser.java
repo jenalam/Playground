@@ -3,6 +3,7 @@ package service;
 import model.CircuitNode;
 import model.components.CircuitElm;
 
+import java.io.File;
 import java.util.List;
 
 /**
@@ -11,10 +12,12 @@ import java.util.List;
 public interface CircuitParser {
 
     /**
-     *
-     * @return list of nodes parsed from file
+     * Parses pseudo-spice txt file into nodes and elements
+     * @param f file to parse
+     * @modifies nodes to contain all circuit nodes for Modified Nodal Analysis
+     * @modifies elements to contain all circuit elements
      */
-    public List<CircuitNode> getNodes();
+    public void parse(File f);
 
     /**
      *
