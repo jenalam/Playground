@@ -1,5 +1,7 @@
 package model.components;
 
+import static util.Constants.*;
+
 /**
  * Created by Jennifer on 10/12/2016.
  */
@@ -17,5 +19,13 @@ public class VoltageElm extends CircuitElm {
 
     public double calculateCurrent() {
         return 0;
+    }
+
+    public void setValue(double value) {
+        this.voltage = value;
+    }
+
+    public ElmType getType() {
+        return ElmType.DC_VOLTAGE;
     }
 }

@@ -38,13 +38,8 @@ public class PseudoSpiceParser implements CircuitParser{
         return null; //TODO
     }
 
-    //Finds circuit nodes and adds them to nodes list
-    private void parseNodes(){
-
-    }
-
     //TODO: rough method... redesign
-    public CircuitElm createElement(char c, double value){
+    private CircuitElm createElement(char c, double value){
         if(c == 'r'){
             return new ResistorElm(value);
         }

@@ -1,3 +1,4 @@
+import model.components.ResistorElm;
 import org.junit.*;
 import service.*;
 
@@ -19,6 +20,8 @@ public class PseudoSpiceParserTest {
 
     @Test
     public void testGetElements_TwoNodeCircuit(){
+        parser.parse(new File("twoNodeCircuit.txt"));
+        assertEquals(2, parser.getElements().size());
         fail("not implemented");
 
     }
@@ -33,5 +36,9 @@ public class PseudoSpiceParserTest {
     public void testGetElements_FourNodeCircuit(){
         fail("not implemented");
 
+    }
+
+    private int countElementsOfType(){
+        return 0; //TODO: implement this method
     }
 }

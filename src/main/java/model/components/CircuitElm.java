@@ -1,6 +1,8 @@
 package model.components;
 
 import model.CircuitNode;
+import static util.Constants.*;
+
 
 import java.awt.*;
 
@@ -23,5 +25,17 @@ public abstract class CircuitElm {
      * @return
      */
     public abstract double calculateCurrent();
+
+    /**
+     * Sets the value of the element (resistance for ResistorElm, voltage for VoltageElm, etc...)
+     * @param value
+     */
+    public abstract void setValue(double value);
+
+    /**
+     * Returns element type
+     * @return element type (resistor, wire, etc.)
+     */
+    public abstract ElmType getType();
 
 }
